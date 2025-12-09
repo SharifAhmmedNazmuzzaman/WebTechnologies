@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Donation Form</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #081012;
+            color: #0D0C0C;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #838D8F;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            color: darkred;
+            margin: 15px 0 10px;
+            font-size: 1.4em;
+            border-bottom: 1px solid #555;
+            padding-bottom: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        td {
+            padding: 7px 0;
+            vertical-align: top;
+        }
+
+        td:first-child {
+            width: 180px;
+            font-weight: bold;
+            text-align: left;
+            padding-right: 15px;
+            color: #000;
+        }
+
+        td:last-child {
+            text-align: left;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 95%;
+            max-width: 400px;
+            padding: 6px 8px;
+            border: 1px solid #999;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        select {
+            height: 30px;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 80px;
+        }
+
+        .required {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* Radio & Checkbox Styling */
+        label {
+            display: inline-block;
+            margin-right: 15px;
+            font-size: 14px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 6px;
+            vertical-align: middle;
+        }
+
+        .radio-group,
+        .checkbox-group {
+            margin: 8px 0;
+        }
+
+        .radio-group label,
+        .checkbox-group label {
+            margin-right: 20px;
+            white-space: nowrap;
+        }
+
+        
+        .inline-input {
+            display: inline-block;
+            width: auto;
+            margin-left: 10px;
+        }
+
+        .inline-input input[type="text"] {
+            width: 80px;
+            display: inline-block;
+        }
+
+        
+        .button-group {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button {
+            background-color: red;
+            color: white;
+            padding: 10px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 0 10px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: green;
+        }
+
+        /* Footer Note */
+        .footer-note {
+            font-size: 12px;
+            color: #333;
+            text-align: center;
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        
+        .honor-group {
+            margin: 10px 0;
+        }
+
+        
+        @media (max-width: 600px) {
+            td:first-child, td:last-child {
+                display: block;
+                width: 100%;
+            }
+            td:first-child {
+                padding-bottom: 5px;
+            }
+            input[type="text"], input[type="email"], select, textarea {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <form>
+        <h2>Donor Information</h2>
+        <table>
+            <tr>
+                <td>First Name<span class="required">*</span>:</td>
+                <td><input type="text" required></td>
+            </tr>
+            <tr>
+                <td>Last Name<span class="required">*</span>:</td>
+                <td><input type="text" required></td>
+            </tr>
+            <tr>
+                <td>Company:</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Address 1<span class="required">*</span>:</td>
+                <td><input type="text" required></td>
+            </tr>
+            <tr>
+                <td>Address 2:</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>City<span class="required">*</span>:</td>
+                <td><input type="text" required></td>
+            </tr>
+            <tr>
+                <td>State<span class="required">*</span>:</td>
+                <td>
+                    <select required>
+                        <option>Select a State</option>
+                        <option>Dhaka</option>
+                        <option>Delhi</option>
+                        <option>Karachi</option>
+                        <option>New York</option>
+                        <option>London</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Zip Code<span class="required">*</span>:</td>
+                <td><input type="text" required></td>
+            </tr>
+            <tr>
+                <td>Country<span class="required">*</span>:</td>
+                <td>
+                    <select required>
+                        <option>Select a Country</option>
+                        <option>Bangladesh</option>
+                        <option>India</option>
+                        <option>Pakistan</option>
+                        <option>USA</option>
+                        <option>UK</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Phone:</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Fax:</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Email<span class="required">*</span>:</td>
+                <td><input type="email" required></td>
+            </tr>
+            <tr>
+                <td>Donation Amount<span class="required">*</span>:</td>
+                <td class="radio-group">
+                    <label><input type="radio" name="amount" value="50"> $50</label>
+                    <label><input type="radio" name="amount" value="75"> $75</label>
+                    <label><input type="radio" name="amount" value="100"> $100</label>
+                    <label><input type="radio" name="amount" value="250"> $250</label>
+                    <label><input type="radio" name="amount" value="other"> Other</label>
+                    <input type="text" class="inline-input" placeholder="Amount">
+                </td>
+            </tr>
+            <tr>
+                <td>Recurring Donation:</td>
+                <td>
+                    <label><input type="checkbox" id="recurring"> I am interested in giving on a regular basis</label><br>
+                    <div style="margin-top:8px; display:none;" id="recurring-details">
+                        Monthly Credit Card $<input type="text" class="inline-input" size="8"> for <input type="text" class="inline-input" size="5"> months
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <h2>Honorarium and Memorial Donation Information</h2>
+        <table>
+            <tr>
+                <td>I would like to make this donation:</td>
+                <td class="radio-group">
+                    <label><input type="radio" name="honor" value="honor"> To Honor</label>
+                    <label><input type="radio" name="honor" value="memory"> In Memory of</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Acknowledge Donation to:</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>City:</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>State:</td>
+                <td>
+                    <select>
+                        <option>Select a State</option>
+                        <option>Dhaka</option>
+                        <option>Delhi</option>
+                        <option>Karachi</option>
+                        <option>New York</option>
+                        <option>London</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Zip:</td>
+                <td><input type="text"></td>
+            </tr>
+        </table>
+
+        <h2>Additional Information</h2>
+        <table>
+            <tr>
+                <td>Please enter your name, company or organization as you would like it to appear in our publications:</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="checkbox-group">
+                    <label><input type="checkbox"> I would like my gift to remain anonymous.</label><br>
+                    <label><input type="checkbox"> My employer offers a matching gift program. I will mail the matching gift form.</label><br>
+                    <label><input type="checkbox"> Please save the cost of acknowledging this gift by not mailing a thank you letter.</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Comments (Please type any questions or feedback here):</td>
+                <td><textarea></textarea></td>
+            </tr>
+            <tr>
+                <td>How may we contact you?</td>
+                <td class="checkbox-group">
+                    <label><input type="checkbox"> E-mail</label>
+                    <label><input type="checkbox"> Postal Mail</label>
+                    <label><input type="checkbox"> Telephone</label>
+                    <label><input type="checkbox"> Fax</label>
+                </td>
+            </tr>
+            <tr>
+                <td>I would like to receive newsletters and information about special events by:</td>
+                <td class="checkbox-group">
+                    <label><input type="checkbox"> E-mail</label>
+                    <label><input type="checkbox"> Postal Mail</label>
+                </td>
+            </tr>
+        </table>
+
+        <div class="button-group">
+            <button type="reset" class="button">Reset</button>
+            <button type="submit" class="button">Continue</button>
+        </div>
+
+        <p class="footer-note">
+            <strong>Donate online with confidence.</strong> You are on a secure server.<br>
+            If you have any problems or questions, please contact support.
+        </p>
+    </form>
+</div>
+
+<script>
+    // Show recurring donation details when checkbox is checked
+    document.getElementById('recurring').addEventListener('change', function() {
+        document.getElementById('recurring-details').style.display = this.checked ? 'block' : 'none';
+    });
+</script>
+
+</body>
+</html>
