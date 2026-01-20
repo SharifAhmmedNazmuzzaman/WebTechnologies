@@ -39,7 +39,7 @@
 					<p>Discover amazing coffee experiences and exclusive offers!</p>
 					<div class="action-buttons">
 						<?php if ($isLoggedIn): ?>
-							<a href="../cafe-management/php/customer/menu.php"><button class="btn">View Menu</button></a>
+							<a href="../WebTechnologies/php/customer/menu.php"><button class="btn">View Menu</button></a>
 						<?php else: ?>
 							<a href="php/login.php"><button class="btn">Login</button></a>
 							
@@ -178,6 +178,6 @@
 				</footer>
 			</div>
 		</div>
-	<script src="../cafe-management/js/index.js"></script>
+	<script src="../WebTechnologies/js/index.js"></script>
 	</body>
 </html>

@@ -1,7 +1,7 @@
 <?php
 session_start();
 session_destroy();
-header("Location: /cafe-management/php/login.php");
+header("Location: /WebTechnologies/php/login.php");
 
 exit();
 ?>
